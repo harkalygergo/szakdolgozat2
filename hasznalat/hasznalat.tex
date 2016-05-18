@@ -1,0 +1,15 @@
+%Az összefoglaló fejezet
+\chapter*{Adathordozó használati útmutató}
+\addcontentsline{toc}{chapter}{Adathordozó használati útmutató}
+
+A mellékelt adathordozón a \texttt{SERVER} mappában található fájlokat szükséges felmásolni a kívánt webszerverre, de természetesen localhostra is telepíthető a csomag. A \texttt{public\_html} mappában lesznek azok a fájlok, melyek a domain név gyökérkönyvtárába kerülnek, a mellette található \texttt{.htpasswd} fájl pedig biztonsági okokból egy szinttel feljebb helyezendő el. A csomag tartalmazza a WordPress 2016. május 12-én aktuális, 4.5.2-es, valamint a WooCoomerce 2.5.5-ös változatát, emellett az általam készített sablon és plugin fájljait is, valamint egyéb kiegészítőket.
+
+ A \texttt{public\_html/wp-admin/.htaccess} fájlban a \texttt{.htpasswd} abszolút elérési útvonalát szükséges megadni a \texttt{AuthUserFile /path/to/.htpasswd} helyen.
+
+A telepítéshez első körben létre kell hozni egy MySQL adatbázist a szerveren, melyre a phpMyAdmin segítségével grafikus felületen is lehetőség van, amennyiben az jelen van az adott tárhelyen. Ezt követően a telepítés már egyszerű, hiszen csak meg kell hívni böngészőben az URL-t, mely alá be lettek másolva a fájlok (például http://localhost vagy http://www.domain.hu), s azonnal megjelenik egy telepítési útmutató, melyet értelemszerűen kell kitölteni, például a létrehozott adatbázis információival.
+
+Sikeres telepítést követően megjelenik az adminisztrációs felület. A bal oldalsávban találhatóak a menüpontok, a \verb|Megjelenés  > Sablonok|  almenü alatt az egyes sablonok, a \verb|Bővítmények > Telepített bővítmények| almenü alatt az egyes pluginok kapcsolhatóak be, vagy a későbbiekben ki. Ezután a \texttt{Beállítások}, valamint a \texttt{WooCommerce} menüpontokon belül számos lehetőség van módosítani a rendszert.
+
+Új szöveges tartalmakat a \texttt{Bejegyzések}, valamint az \texttt{Oldal}, termékeket a \texttt{Termékek} menüpontokon belül lehet felvinni, illetve a későbbiekben a meglévőeket módosítani.
+
+A \verb|public_html| mappa mellett elhelyeztem egy \verb|demo.sql| fájlt is, melyet a MySQL-be importálva (például phpMyAdminon keresztül) egy tesztadatokkal feltöltött környezett kapunk.

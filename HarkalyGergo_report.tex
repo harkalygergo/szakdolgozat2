@@ -1,0 +1,40 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage{szakd_report}
+
+% SAJÁT
+\parskip=12pt
+\newcommand\tab[1][20pt]{\hspace*{#1}}
+\usepackage{hyperref}
+\usepackage{listings}
+\lstset{
+	basicstyle=\ttfamily\footnotesize,
+	backgroundcolor=\color[rgb]{0.95,0.95,0.95},
+	frame=single,
+	tabsize=4,
+	rulecolor=\color[rgb]{0.95,0.95,0.95},
+	title=\lstname,
+	escapeinside={\%*}{*)},
+	breaklines=true,
+	breakatwhitespace=true,
+	framextopmargin=2pt,
+	framexbottommargin=2pt,
+	inputencoding=utf8,
+	extendedchars=true,
+	literate={á}{{\'a}}1 {é}{{\'e}}1 {í}{{{\'\i}}}1 {ó}{{\'o}}1 {ö}{{\"o}}1 {ő}{{\H o}}1 {ú}{{\'u}}1 {Ú}{{\'U}}1 {ü}{{\"u}}1 {ű}{{\H u}}1 {Ü}{{\"U}}1}
+\graphicspath{{kepek/}}
+
+\begin{document}
+\include{cimlap/cimlap}
+\pagestyle{myheadings}
+\include{feladatkiiras/feladatkiiras}%feladat kiírás
+\tableofcontents %automatikus tartalomjegyzék-változás esetén kétszer fordítani
+\newpage
+\pagestyle{fancy} %az oldal stílusa, ez adja az aláhúzott fejlecet
+\include{fejezetek/bevezetes}
+\include{fejezetek/elmelet}
+\include{fejezetek/dokumentacio}
+%\include{sajat}
+\include{osszefoglalas/osszefoglalas}
+\include{irodalomjegyzek/irod_jegyzek}
+\include{hasznalat/hasznalat}
+\end{document}

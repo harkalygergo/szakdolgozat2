@@ -1,0 +1,125 @@
+\Chapter{Összefoglalás}
+\label{Chap:osszefoglalas}
+
+\Section{Magyar}
+
+A létrejött webalkalmazás összességében megfelel a mai kor igényeinek, hiszen a sokoldalú adminisztrációs felület, a reszponzív megjelenés, valamint a közösségi oldalak integrációja mind-mind hozzájárul egy vállalkozás sikeres online jelenlétéhez.
+
+A feladat kivitelezése során sikerült mélyebben elsajátítani a WordPress rendszer használatát, megismerni a hozzá kapcsolódó WooCommerce bővítményt, valamint a Twitter által fejlesztett Bootstrap keretrendszert is. Mindez a tudás jelenleg rendkívül hasznos, hisz az informatikai piacon ezek a technológiák vezető szerepet töltenek be a saját területükön.
+
+A rendszer azonban még korántsem tökéletes, számos ponton lehetne még javítani. Ezek közül a legfontosabbak:
+
+\begin{itemize}
+	\item \textbf{breadcrumbs}: a kifejezésnek magyar egységesített megfelelője még nincs, talán a webmorzsa szó a legtalálóbb. A breadcrumbs egy navigációs eszköz, mely a weboldal kiindulópontjától (például domain.hu/) a felhasználó aktuális tartózkodási helyéig (például domain.hu/termekek/ferfi-ruha/nadrag/kek-feher-csikos-farmer) vezető utat mutatja (például Főoldal > Termékek > Férfi ruha > Nadrág > Kék-fehér csíkos farmer)
+	\item \textbf{microformats}: a mikroformátum olyan adatforma, melyeket különböző adattípusok egységesítésére használnak. A mikroformátum a keresőrobotok, azaz az úgynevezett "bot"-ok és az emberek számára is értelmezhető és olvasható adat. Funkciója, hogy az egységes forma révén az adatok kereshetővé, valamint más alkalmazásokba is egyszerűen beilleszthetőekké válnak.  További részletek angol nyelven a \url{http://microformats.org/} oldalon érhetőek el.
+	\item \textbf{schema tag}: a schema jelölések használata webáruházaknál, de bármilyen weboldalnál szinte már kötelező, hiszen ezzel is nagyobb forgalom generálható a keresők találati listáján, illetve annak különböző kiegészítéseinél. A felhasználók számára így hasznosabbá, érthetőbbé válik a kínált tartalom, javul a felhasználó élmény, amit a Google is értékel. További részletek angol nyelven a \url{https://schema.org/} oldalon érhető el.
+\end{itemize}
+
+A \href{https://developers.google.com/structured-data/testing-tool/}{Google fejlesztői felületén} lehetőség van tesztelni is ezeket az adatokat.
+
+\Section{English}
+
+The created webb application meets the nees of today, as the versatile administrative interface (dashboard), responsive appearance (layout) and social networking integration all contribute to a successful online business presence.
+
+While I've been performing tasks I could learn to use WordPress system, know the associated plugin named WooCommerce and the Bootstrap framework developed by Twitter. This knowledge is currently very useful, because in the IT market these technologies are leaders in their respective territories.
+
+The system is far from perfect, however, a number of points could be improved. The most important are:
+
+\begin{itemize}
+	\item \textbf{breadcrumbs}: there isn't a perfect Hungarian translate for it, maybe it could be named "webmorzsa". The breadcrumbs is a navigation tool which shows the way on the webpage from the website's root (for example domain.hu/) to the current position (for example domain/hu/shop/product/men/jeans/blue-white-stripped-jeans) in this format: Homepage > Shop > Producst > Men > Jeans > Blue-white stripped jeans.
+	\item \textbf{microformats}: Microformats are data formats which used for unifies different data types. The microformats are interpretable and readable for search bots and people too. It's function is to unified data type could be searchable and pastable into apps. More information in English on the \url{http://microformats.org/} site.
+	\item \textbf{schema tag}: usage of schema on webshops or any other type of webpage is a must nowadays, because higher traffic can be generated on search results' page and on that's other plugins. In this way the content is more useful and understandable for users, user experience improves, what Google appreciates too. More information on the \url{https://schema.org/} site.
+\end{itemize}
+
+On the \href{https://developers.google.com/structured-data/testing-tool/}{Google' developers site} this tools can be tested.
+
+\newpage
+
+\Chapter{Mellékletek}
+\label{Chap:melleklet}
+
+\Section{Forráskódok}
+
+\newpage
+
+\SubSection{Facebook Open Graph kódja a sablon header.php-ban}
+
+\begin{lstlisting}
+	<!-- Facebook OpenGraph | https://developers.facebook.com/docs/sharing/best-practices -->
+	<meta property="fb:app_id" content="837847339665576">
+	<meta property="og:url" content="<?=getFullURL();?>">
+	<meta property="og:title" content="<?php wp_title(''); echo ' - '; bloginfo('name'); ?>">
+	<meta property="og:site_name" content="<?php bloginfo('name'); ?>">
+	<meta property="og:description" content="<?lphp if(is_home()) { bloginfo('description'); } else { echo getPostExcerptOutsideLoop($post->ID, 160, FALSE); } ?>">
+	<meta property="og:locale" content="<?=$locale.locale_LOCALE;?>">
+	<?php global $pagenow; if(is_single()) { ?>
+		<meta property="og:type" content="article">
+		<meta property="og:image" content="<?php if(has_post_thumbnail($post->ID)) echo wp_get_attachment_image_src( get_post_thumbnail_id($post->ID ), 'medium')['0']; ?>">
+		<meta property="article:author" content="<?=get_theme_mod('facebookpageURL');?>">
+		<meta property="article:publisher" content="<?=get_theme_mod('facebookpageURL');?>">
+		<meta property="article:published_time" content="<?=get_the_date('Y-m-d H:i:s'); the_date('Y-m-d H:i:s'); ?>">
+		<meta property="article:modified_time" content="<?php the_modified_date('Y-m-d H:i:s'); ?>">
+		<!--<meta property="article:expiration_time" content="">-->
+		<meta property="article:section" content="">
+		<meta property="article:tag" content="<?php $posttags=get_the_tags(); if($posttags) { foreach($posttags as $tag) { echo $tag->name.', '; } } ?>">
+	<?php
+	} elseif ($pagenow == 'product.php') {
+	?>
+		<meta property="product:plural_title" content="-">
+		<meta property="product:price:amount" content="100">
+		<meta property="product:price:currency" content="HUF">
+	<?php
+	} elseif ($pagenow == 'profile.php') {
+		?>
+		<meta property="og:type" content="profile">
+		<meta property="profile:first_name" content="">
+		<meta property="profile:last_name" content="">
+		<meta property="profile:username" content="">
+		<meta property="profile:gender" content="">
+	<?php
+	} else {
+		?>
+		<meta property="og:type" content="website">
+	<?php } ?>
+\end{lstlisting}
+
+\newpage
+
+\SubSection{A captcha kódja}
+
+\begin{lstlisting}
+// captcha on login form
+class LoginFormCaptcha
+{
+	private $key1, $key2;
+	public function __construct()
+	{
+		add_action('login_form', array($this, 'captcha_display'));
+		add_action('wp_authenticate_user', array($this, 'validate_captcha'), 10, 2);
+	}
+	public function captcha_display()
+	{
+		$key1 = rand(1,10);
+		$key2 = rand(1,10);
+		?>
+			<p>
+				<label for="user_captcha">Captcha</label>
+				<input type="text" name="user_captcha" class="input" placeholder="<?=$key1.'+'.$key2.'=?';?>" required>
+				<input type="hidden" name="captcharesult" value="<?=$key1+$key2;?>" required>
+			</p>
+	<?php }
+	public function validate_captcha($user, $password)
+	{
+		if(!isset($_POST['user_captcha']) || empty($_POST['user_captcha']) || !isset($_POST['captcharesult']) || empty($_POST['captcharesult']))
+		{
+			return new WP_Error('empty_captcha', __('CAPTCHA should not be empty', 'mangowpplugin'));
+		}
+		if(isset($_POST['user_captcha']) && isset($_POST['captcharesult']) && $_POST['user_captcha'] != $_POST['captcharesult'])
+		{
+			return new WP_Error('invalid_captcha', __('CAPTCHA response was incorrect', 'mangowpplugin'));
+		}
+		return $user;
+	}
+}
+new LoginFormCaptcha();
+\end{lstlisting}
