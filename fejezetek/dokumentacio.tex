@@ -158,8 +158,6 @@ A WordPress tartalomkezelővel készült honlapokat rengeteg támadás éri, his
 remove_action('wp_head', 'wp_generator');
 \end{lstlisting}
 
-\newpage
-
 \Section{Többnyelvűsítés - iln18}
 
 Az \texttt{iln18} egy nemzetközi jelzése a többnyelvűsítésnek, mely arra utal, hogy az \texttt{l} és \texttt{n} karakterek között nemzetközi viszonylatban összesen 18 másik karakter létezik. Bár a magyar nyelvben csak az \verb|ly| és \verb|m| foglal helyet, de nem feledkezhetünk meg más országok, népek nyelvéről sem.
@@ -212,6 +210,8 @@ Bár a WordPress számos funkciót biztosít, melyekkel egy összetettebb honlap
 
 Szerettem volna felkészülni a többnyelvűsítésre is, melyben a feltételezés az, hogy az egyes nyelvekhez tartozó oldalak URL-jében a fődomain mögött az adott nyelv két karakterből álló rövidített verziója fog majd szerepelni, például \texttt{domain.hu/en/}, \texttt{domain.hu/de/}. A megalkotott függvény segítségével először a link végének levágásával meghatározom az adott nyelvet, majd arra alapozva további konstans értékeket, hiszen a HTML tagok valamint különböző API-k \verb|lang| paramétere eltérhet (például hu-HU vagy hu\_HU). Nehezítette a dolgot, hogy az angol nyelv kétbetűs kódja egyértelműen az \texttt{en}, azonban például a \texttt{hu\_HU} és \texttt{de\_DE} meghatározáshoz hasonlóan nincs \texttt{en\_EN}, de van \texttt{GB} vagy \texttt{US}. Egyelőre a \texttt{GB} verzió mellett döntöttem.
 
+\newpage
+
 \begin{lstlisting}
 // set locale variable based on URL substring
 function SetLocaleByURL()
@@ -232,8 +232,6 @@ function SetLocaleByURL()
 }
 \end{lstlisting}
 
-\newpage
-
 Egy-egy oldal teljes URL-jének lekérése:
 
 \begin{lstlisting}
@@ -243,8 +241,6 @@ function getFullURL()
 	return 'http'.(isset($_SERVER['HTTPS']) ? 's' : '').'://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 }
 \end{lstlisting}
-
-\newpage
 
 \Section{Sablon létrehozása}
 
@@ -306,14 +302,7 @@ A Google keresőoptimalizálást segítő egyik eszköze a \href{https://www.goo
 	<meta name="google-site-verification" content="">
 \end{lstlisting}
 
-\newpage
-
 \Section{A Bootstrap bemutatása}
-
-\begin{figure}
-	\includegraphics[width=1\textwidth]{bootstrap.png}
-	\caption{A getbootstrap.com főoldala}
-\end{figure}
 
 Manapság elengedhetetlen a reszponzív megjelenés, azaz ahogy azt mondani szokták: kijelzőfüggetlen megjelenés, bár én pont hogy kijelzőfüggőnek nevezném. Mitöbb, a \href{https://webmasters.googleblog.com/2015/02/finding-more-mobile-friendly-search.html}{Google rangsorolási algoritmusának része lett 2015. április 21-től}, így a mobilos keresések során azok a weboldalak, melyek nincsenek felkészítve a kisebb kijelzőméretekre, hátrányos megkülönböztetésben részesülnek. (Itt megjegyezném, hogy 2016-ra még ennél is komolyabb változásokat helyeztek kilátásba a legnagyobb technológia cégek az \href{https://www.ampproject.org/}{Accelerated Mobile Pages Project} keretében, hogy még jobban növelni tudják a mobilos felhasználói élményt.)
 

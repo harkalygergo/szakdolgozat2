@@ -112,14 +112,32 @@ class LoginFormCaptcha
 	{
 		if(!isset($_POST['user_captcha']) || empty($_POST['user_captcha']) || !isset($_POST['captcharesult']) || empty($_POST['captcharesult']))
 		{
-			return new WP_Error('empty_captcha', __('CAPTCHA should not be empty', 'mangowpplugin'));
+			return new WP_Error('empty_captcha', __('CAPTCHA should not be empty', 'ccrmsplugin'));
 		}
 		if(isset($_POST['user_captcha']) && isset($_POST['captcharesult']) && $_POST['user_captcha'] != $_POST['captcharesult'])
 		{
-			return new WP_Error('invalid_captcha', __('CAPTCHA response was incorrect', 'mangowpplugin'));
+			return new WP_Error('invalid_captcha', __('CAPTCHA response was incorrect', 'ccrmsplugin'));
 		}
 		return $user;
 	}
 }
 new LoginFormCaptcha();
 \end{lstlisting}
+
+\newpage
+
+\Section{Képek}
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[height=8.5in]{katt-sport-hu-teljes-fooldal.jpg}
+		\caption{A katt.sport.hu főoldala}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[height=8.5in]{katt-sport-hu-bejegyzes.jpg}
+		\caption{Példa a katt.sport.hu bejegyzésének megjelenítésére}
+\end{figure}
+
+\newpage

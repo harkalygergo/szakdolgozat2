@@ -1,5 +1,5 @@
 \BOOKMARK [0][-]{chapter.1}{Bevezet\351s}{}% 1
-\BOOKMARK [1][-]{section.1.1}{ Motiv\341ci\363}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.1}{Motiv\341ci\363}{chapter.1}% 2
 \BOOKMARK [0][-]{chapter.2}{L\351tezo rendszerek fobb ism\351rvei}{}% 3
 \BOOKMARK [1][-]{section.2.1}{Drupal}{chapter.2}% 4
 \BOOKMARK [1][-]{section.2.2}{Joomla}{chapter.2}% 5
@@ -11,23 +11,27 @@
 \BOOKMARK [1][-]{section.2.8}{WordPress}{chapter.2}% 11
 \BOOKMARK [0][-]{chapter.3}{Probl\351m\341k elm\351leti megk\366zel\355t\351se}{}% 12
 \BOOKMARK [1][-]{section.3.1}{Haszn\341land\363 technol\363gi\341k}{chapter.3}% 13
-\BOOKMARK [1][-]{section.3.2}{Adatstrukt\372ra szervez\351se}{chapter.3}% 14
-\BOOKMARK [0][-]{chapter.4}{Fejlesztoi dokument\341ci\363}{}% 15
-\BOOKMARK [1][-]{section.4.1}{WordPress, mint a rendszer alapja}{chapter.4}% 16
-\BOOKMARK [1][-]{section.4.2}{Biztons\341g}{chapter.4}% 17
-\BOOKMARK [1][-]{section.4.3}{T\366bbnyelvus\355t\351s - iln18}{chapter.4}% 18
-\BOOKMARK [1][-]{section.4.4}{Saj\341t fejleszt\351su funkci\363k}{chapter.4}% 19
-\BOOKMARK [1][-]{section.4.5}{Sablon l\351trehoz\341sa}{chapter.4}% 20
-\BOOKMARK [1][-]{section.4.6}{A Bootstrap bemutat\341sa}{chapter.4}% 21
-\BOOKMARK [1][-]{section.4.7}{Felhaszn\341l\363i el\351gedetts\351g n\366vel\351se}{chapter.4}% 22
-\BOOKMARK [2][-]{subsection.4.7.1}{Keresomezo}{section.4.7}% 23
-\BOOKMARK [2][-]{subsection.4.7.2}{Marketing}{section.4.7}% 24
-\BOOKMARK [0][-]{chapter.5}{\326sszefoglal\341s}{}% 25
-\BOOKMARK [1][-]{section.5.1}{Magyar}{chapter.5}% 26
-\BOOKMARK [1][-]{section.5.2}{English}{chapter.5}% 27
-\BOOKMARK [0][-]{chapter.6}{Mell\351kletek}{}% 28
-\BOOKMARK [1][-]{section.6.1}{Forr\341sk\363dok}{chapter.6}% 29
-\BOOKMARK [2][-]{subsection.6.1.1}{Facebook Open Graph k\363dja a sablon header.php-ban}{section.6.1}% 30
-\BOOKMARK [2][-]{subsection.6.1.2}{A captcha k\363dja}{section.6.1}% 31
-\BOOKMARK [0][-]{chapter*.2}{Irodalomjegyz\351k}{}% 32
-\BOOKMARK [0][-]{chapter*.3}{Adathordoz\363 haszn\341lati \372tmutat\363}{}% 33
+\BOOKMARK [2][-]{subsection.3.1.1}{Tartalomkezelo rendszer kiv\341laszt\341sa}{section.3.1}% 14
+\BOOKMARK [1][-]{section.3.2}{Egyedi adatstrukt\372ra szervez\351se}{chapter.3}% 15
+\BOOKMARK [2][-]{subsection.3.2.1}{PHP t\366mb, mint has\355t\363t\341bl\341s lek\351pez\351s}{section.3.2}% 16
+\BOOKMARK [1][-]{section.3.3}{Layout tervez\351s}{chapter.3}% 17
+\BOOKMARK [0][-]{chapter.4}{Fejlesztoi dokument\341ci\363}{}% 18
+\BOOKMARK [1][-]{section.4.1}{WordPress, mint a rendszer alapja}{chapter.4}% 19
+\BOOKMARK [1][-]{section.4.2}{Biztons\341g}{chapter.4}% 20
+\BOOKMARK [1][-]{section.4.3}{T\366bbnyelvus\355t\351s - iln18}{chapter.4}% 21
+\BOOKMARK [1][-]{section.4.4}{Saj\341t fejleszt\351su funkci\363k}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.5}{Sablon l\351trehoz\341sa}{chapter.4}% 23
+\BOOKMARK [1][-]{section.4.6}{A Bootstrap bemutat\341sa}{chapter.4}% 24
+\BOOKMARK [1][-]{section.4.7}{Felhaszn\341l\363i el\351gedetts\351g n\366vel\351se}{chapter.4}% 25
+\BOOKMARK [2][-]{subsection.4.7.1}{Keresomezo}{section.4.7}% 26
+\BOOKMARK [2][-]{subsection.4.7.2}{Marketing}{section.4.7}% 27
+\BOOKMARK [0][-]{chapter.5}{\326sszefoglal\341s}{}% 28
+\BOOKMARK [1][-]{section.5.1}{Magyar}{chapter.5}% 29
+\BOOKMARK [1][-]{section.5.2}{English}{chapter.5}% 30
+\BOOKMARK [0][-]{chapter.6}{Mell\351kletek}{}% 31
+\BOOKMARK [1][-]{section.6.1}{Forr\341sk\363dok}{chapter.6}% 32
+\BOOKMARK [2][-]{subsection.6.1.1}{Facebook Open Graph k\363dja a sablon header.php-ban}{section.6.1}% 33
+\BOOKMARK [2][-]{subsection.6.1.2}{A captcha k\363dja}{section.6.1}% 34
+\BOOKMARK [1][-]{section.6.2}{K\351pek}{chapter.6}% 35
+\BOOKMARK [0][-]{chapter*.2}{Irodalomjegyz\351k}{}% 36
+\BOOKMARK [0][-]{chapter*.3}{Adathordoz\363 haszn\341lati \372tmutat\363}{}% 37

@@ -1,33 +1,37 @@
 \select@language {magyar} \contentsline {chapter}{\numberline {1}Bevezet\IeC {\'e}s}{8}{chapter.1}
-\select@language {magyar} \contentsline {section}{\numberline {1.1} Motiv\IeC {\'a}ci\IeC {\'o}}{9}{section.1.1}
+\select@language {magyar} \contentsline {section}{\numberline {1.1}Motiv\IeC {\'a}ci\IeC {\'o}}{9}{section.1.1}
 \select@language {magyar} \contentsline {chapter}{\numberline {2}L\IeC {\'e}tez\IeC {\H o} rendszerek f\IeC {\H o}bb ism\IeC {\'e}rvei}{10}{chapter.2}
 \select@language {magyar} \contentsline {section}{\numberline {2.1}Drupal}{11}{section.2.1}
 \select@language {magyar} \contentsline {section}{\numberline {2.2}Joomla}{12}{section.2.2}
 \select@language {magyar} \contentsline {section}{\numberline {2.3}Magento}{13}{section.2.3}
 \select@language {magyar} \contentsline {section}{\numberline {2.4}OpenCart}{14}{section.2.4}
 \select@language {magyar} \contentsline {section}{\numberline {2.5}PrestaShop}{15}{section.2.5}
-\select@language {magyar} \contentsline {section}{\numberline {2.6}MiniCRM}{16}{section.2.6}
-\select@language {magyar} \contentsline {section}{\numberline {2.7}Siebel}{17}{section.2.7}
-\select@language {magyar} \contentsline {section}{\numberline {2.8}WordPress}{18}{section.2.8}
-\select@language {magyar} \contentsline {chapter}{\numberline {3}Probl\IeC {\'e}m\IeC {\'a}k elm\IeC {\'e}leti megk\IeC {\"o}zel\IeC {\'\i }t\IeC {\'e}se}{19}{chapter.3}
-\select@language {magyar} \contentsline {section}{\numberline {3.1}Haszn\IeC {\'a}land\IeC {\'o} technol\IeC {\'o}gi\IeC {\'a}k}{19}{section.3.1}
-\select@language {magyar} \contentsline {section}{\numberline {3.2}Adatstrukt\IeC {\'u}ra szervez\IeC {\'e}se}{19}{section.3.2}
-\select@language {magyar} \contentsline {chapter}{\numberline {4}Fejleszt\IeC {\H o}i dokument\IeC {\'a}ci\IeC {\'o}}{21}{chapter.4}
-\select@language {magyar} \contentsline {section}{\numberline {4.1}WordPress, mint a rendszer alapja}{21}{section.4.1}
-\select@language {magyar} \contentsline {section}{\numberline {4.2}Biztons\IeC {\'a}g}{23}{section.4.2}
-\select@language {magyar} \contentsline {section}{\numberline {4.3}T\IeC {\"o}bbnyelv\IeC {\H u}s\IeC {\'\i }t\IeC {\'e}s - iln18}{27}{section.4.3}
-\select@language {magyar} \contentsline {section}{\numberline {4.4}Saj\IeC {\'a}t fejleszt\IeC {\'e}s\IeC {\H u} funkci\IeC {\'o}k}{28}{section.4.4}
-\select@language {magyar} \contentsline {section}{\numberline {4.5}Sablon l\IeC {\'e}trehoz\IeC {\'a}sa}{30}{section.4.5}
-\select@language {magyar} \contentsline {section}{\numberline {4.6}A Bootstrap bemutat\IeC {\'a}sa}{32}{section.4.6}
-\select@language {magyar} \contentsline {section}{\numberline {4.7}Felhaszn\IeC {\'a}l\IeC {\'o}i el\IeC {\'e}gedetts\IeC {\'e}g n\IeC {\"o}vel\IeC {\'e}se}{33}{section.4.7}
-\select@language {magyar} \contentsline {subsection}{\numberline {4.7.1}Keres\IeC {\H o}mez\IeC {\H o}}{33}{subsection.4.7.1}
-\select@language {magyar} \contentsline {subsection}{\numberline {4.7.2}Marketing}{33}{subsection.4.7.2}
-\select@language {magyar} \contentsline {chapter}{\numberline {5}\IeC {\"O}sszefoglal\IeC {\'a}s}{35}{chapter.5}
-\select@language {magyar} \contentsline {section}{\numberline {5.1}Magyar}{35}{section.5.1}
-\select@language {magyar} \contentsline {section}{\numberline {5.2}English}{36}{section.5.2}
-\select@language {magyar} \contentsline {chapter}{\numberline {6}Mell\IeC {\'e}kletek}{37}{chapter.6}
-\select@language {magyar} \contentsline {section}{\numberline {6.1}Forr\IeC {\'a}sk\IeC {\'o}dok}{37}{section.6.1}
-\select@language {magyar} \contentsline {subsection}{\numberline {6.1.1}Facebook Open Graph k\IeC {\'o}dja a sablon header.php-ban}{38}{subsection.6.1.1}
-\select@language {magyar} \contentsline {subsection}{\numberline {6.1.2}A captcha k\IeC {\'o}dja}{39}{subsection.6.1.2}
-\select@language {magyar} \contentsline {chapter}{Irodalomjegyz\'ek}{40}{chapter*.2}
-\select@language {magyar} \contentsline {chapter}{Adathordoz\IeC {\'o} haszn\IeC {\'a}lati \IeC {\'u}tmutat\IeC {\'o}}{42}{chapter*.3}
+\select@language {magyar} \contentsline {section}{\numberline {2.6}MiniCRM}{17}{section.2.6}
+\select@language {magyar} \contentsline {section}{\numberline {2.7}Siebel}{18}{section.2.7}
+\select@language {magyar} \contentsline {section}{\numberline {2.8}WordPress}{19}{section.2.8}
+\select@language {magyar} \contentsline {chapter}{\numberline {3}Probl\IeC {\'e}m\IeC {\'a}k elm\IeC {\'e}leti megk\IeC {\"o}zel\IeC {\'\i }t\IeC {\'e}se}{20}{chapter.3}
+\select@language {magyar} \contentsline {section}{\numberline {3.1}Haszn\IeC {\'a}land\IeC {\'o} technol\IeC {\'o}gi\IeC {\'a}k}{20}{section.3.1}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.1.1}Tartalomkezel\IeC {\H o} rendszer kiv\IeC {\'a}laszt\IeC {\'a}sa}{20}{subsection.3.1.1}
+\select@language {magyar} \contentsline {section}{\numberline {3.2}Egyedi adatstrukt\IeC {\'u}ra szervez\IeC {\'e}se}{22}{section.3.2}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.2.1}PHP t\IeC {\"o}mb, mint has\IeC {\'\i }t\IeC {\'o}t\IeC {\'a}bl\IeC {\'a}s lek\IeC {\'e}pez\IeC {\'e}s}{22}{subsection.3.2.1}
+\select@language {magyar} \contentsline {section}{\numberline {3.3}Layout tervez\IeC {\'e}s}{23}{section.3.3}
+\select@language {magyar} \contentsline {chapter}{\numberline {4}Fejleszt\IeC {\H o}i dokument\IeC {\'a}ci\IeC {\'o}}{25}{chapter.4}
+\select@language {magyar} \contentsline {section}{\numberline {4.1}WordPress, mint a rendszer alapja}{25}{section.4.1}
+\select@language {magyar} \contentsline {section}{\numberline {4.2}Biztons\IeC {\'a}g}{27}{section.4.2}
+\select@language {magyar} \contentsline {section}{\numberline {4.3}T\IeC {\"o}bbnyelv\IeC {\H u}s\IeC {\'\i }t\IeC {\'e}s - iln18}{30}{section.4.3}
+\select@language {magyar} \contentsline {section}{\numberline {4.4}Saj\IeC {\'a}t fejleszt\IeC {\'e}s\IeC {\H u} funkci\IeC {\'o}k}{31}{section.4.4}
+\select@language {magyar} \contentsline {section}{\numberline {4.5}Sablon l\IeC {\'e}trehoz\IeC {\'a}sa}{32}{section.4.5}
+\select@language {magyar} \contentsline {section}{\numberline {4.6}A Bootstrap bemutat\IeC {\'a}sa}{34}{section.4.6}
+\select@language {magyar} \contentsline {section}{\numberline {4.7}Felhaszn\IeC {\'a}l\IeC {\'o}i el\IeC {\'e}gedetts\IeC {\'e}g n\IeC {\"o}vel\IeC {\'e}se}{35}{section.4.7}
+\select@language {magyar} \contentsline {subsection}{\numberline {4.7.1}Keres\IeC {\H o}mez\IeC {\H o}}{35}{subsection.4.7.1}
+\select@language {magyar} \contentsline {subsection}{\numberline {4.7.2}Marketing}{35}{subsection.4.7.2}
+\select@language {magyar} \contentsline {chapter}{\numberline {5}\IeC {\"O}sszefoglal\IeC {\'a}s}{37}{chapter.5}
+\select@language {magyar} \contentsline {section}{\numberline {5.1}Magyar}{37}{section.5.1}
+\select@language {magyar} \contentsline {section}{\numberline {5.2}English}{38}{section.5.2}
+\select@language {magyar} \contentsline {chapter}{\numberline {6}Mell\IeC {\'e}kletek}{39}{chapter.6}
+\select@language {magyar} \contentsline {section}{\numberline {6.1}Forr\IeC {\'a}sk\IeC {\'o}dok}{39}{section.6.1}
+\select@language {magyar} \contentsline {subsection}{\numberline {6.1.1}Facebook Open Graph k\IeC {\'o}dja a sablon header.php-ban}{40}{subsection.6.1.1}
+\select@language {magyar} \contentsline {subsection}{\numberline {6.1.2}A captcha k\IeC {\'o}dja}{41}{subsection.6.1.2}
+\select@language {magyar} \contentsline {section}{\numberline {6.2}K\IeC {\'e}pek}{42}{section.6.2}
+\select@language {magyar} \contentsline {chapter}{Irodalomjegyz\'ek}{44}{chapter*.2}
+\select@language {magyar} \contentsline {chapter}{Adathordoz\IeC {\'o} haszn\IeC {\'a}lati \IeC {\'u}tmutat\IeC {\'o}}{46}{chapter*.3}

@@ -206,10 +206,66 @@ A feladat elvégzése során, mint ahogy az a projekteknél megszokott, számos 
 
 \Section{Használandó technológiák}
 
-Első és legnagyobb kérdés a használandó technológiák kiválasztása. Döntésemnél figyelembe vettem azt, hogy manapság melyik mennyire elterjedt, emiatt hosszú távon is piacképes, valamint azt, hogy mennyire dokumentáltak, így könnyen találni már meglévő megoldásokat, valamint kiindulási pontot a hibaelhárítások során (debug). Emellett nem kerülhettem el azt a tényt sem, hogy a mobilos (ide értve a tabletet is) internethasználat rohamos léptekben terjed, ezért mind az adminisztrációs felület, mind a design tekintetében erre fel kell készülni.
+Első és legnagyobb kérdés a használandó technológiák kiválasztása. Döntésemnél figyelembe vettem azt, hogy manapság melyik rendszer mennyire elterjedt, emiatt hosszú távon is piacképes, valamint azt, hogy mennyire dokumentáltak, így könnyen találni már meglévő megoldásokat, valamint kiindulási pontot a hibaelhárítások során (debug). Emellett nem kerülhettem el azt a tényt sem, hogy a mobilos (ide értve a tabletet is) internethasználat rohamos léptekben terjed, ezért mind az adminisztrációs felület, mind a design tekintetében erre szinte kötelező jelleggel fel kell készülni.
 
-\Section{Adatstruktúra szervezése}
+\SubSection{Tartalomkezelő rendszer kiválasztása}
+
+A WordPress egy kész tartalomkezelő rendszer, melyet - mint ahogy azt a bevezetőben bemutattam - a világ számos pontján, szinte a gazdaság bármely területén tevékenykedő vállalkozás használ jelenleg is, hiszen több tízmillió weboldal jött létre segítségével.
+
+Ennek köszönhetően mind a felhasználói, mind a fejlesztői dokumentáció rendkívül részletes, mely nagyban megkönnyíti a projekt kivitelezését, valamint a későbbi módosítási kérések gyors és hatékony lekezelését.
+
+A WordPress adatbázisának, valamint az adminisztrációs felületének felépítése - összehasonlítva más ingyenesen elérhető alternatívákkal, melyeket szintúgy taglaltam e dolgozat elején - bizonyult a legcélravezetőbbnek. Míg a webáruházra szolgáló rendszerek (így például Magento) a termékadatok tárolására a jelenlegi igényeknél bőven túlmutató, rendkívül összetett struktúrát valósítanak meg, addig a WordPress + WooCommerce kombináció alig néhány táblával bővíti ki a MySQL adatbázist.
+
+\begin{figure}[H]
+	\includegraphics[width=1\textwidth]{wordpress-ER-diagram.png}
+	\caption{A WordPress 4.4.2 ER diagramja (forrás: https://codex.wordpress.org/Database\_Description)}
+\end{figure}
+
+\Section{Egyedi adatstruktúra szervezése}
 
 A tárolandó, illetve használandó adatok esetében is vetődtek fel kérdések, így például a névnapi köszöntő megtervezésekor is. Egyrészt szerettem volna automatikus üzeneteket küldeni, tehát az év minden napjához el kellett tárolnom a hivatalos magyarországi névnapokat, ahol több is van egy nap, ott természetesen mindegyiket. Ekkor keresésnél a dátum jelentené az indexet. Emellett szerettem volna könnyíteni a felhasználók dolgát is azzal, hogy a keresztnév megadásakor automatikusan felajánlom az adott névhez társítható dátumokat (hiszen egy-egy névből nemcsak egy, hanem több névnap is lehet egy éven). Ebben az esetben a keresések során az index már maga a név lenne, s nem a dátum. Ez ellentmondáshoz vezetett.
 
 Megoldási alternatíva több is adódott előttem. Egyrészt a switch-case szerkezet, másrészt a tömbök, harmadrészt az adatbázis. Figyelembe véve azt, hogy önmagában a magyar keresztnevekből több, mint 4000 van, a switch-case szerkezetet elvetettem, mert ebben az esetben már lassú lett volna a keresés, hisz ott az értékek nincsenek indexelve, a program egyszerű összehasonlítást végez. Azt is mérlegeltem, hogy nem olyan adatokról van szó, melyeket védeni kellene, ezért az adatbázisban történő tárolása értelmetlennek és feleslegesen biztonságosnak tűnt. Ezért a tömb mellett döntöttem, hiszen bár a PHP nyelvben nincs úgynevezett HashMap, mint más fejlett programozási nyelvekben (például Java), a tömb megvalósítása lényegében megfelel annak.
+
+\SubSection{PHP tömb, mint hasítótáblás leképezés}
+
+A \href{http://php.net/manual/en/language.types.array.php}{php.net} hivatalos magyarázata a tömbről:
+
+\begin{quote}
+"An array in PHP is actually an ordered map. A map is a type that associates values to keys. This type is optimized for several different uses; it can be treated as an array, list (vector), hash table (an implementation of a map), dictionary, collection, stack, queue, and probably more. As array values can be other arrays, trees and multidimensional arrays are also possible."
+\end{quote}
+
+Mindez szabad fordításomban:
+
+\textit{A PHP tömb valójában egy hasítótáblás leképezés (HashMap), mely egy olyan adattípus, ami kulcsokhoz rendel értékeket. Ez a megoldás számos különböző felhasználásnak megfelel, hiszen kezelhető tömbként, listaként (vektor), hasítótáblaként (a leképezés egy megvalósítási formája), halmazként, sorként, és még sorolhatnánk. Mint ahogy a tömbök állhatnak további tömbökből, ugyanúgy lehetséges a fa adatszerkezet és a többdimenziós tömb is.}
+
+\newpage
+
+Példa PHP tömbre:
+\begin{lstlisting}
+<?php
+$tomb = array(
+	"kulcs1" => "ertek1",
+	"kulcs2" => "ertek2",
+);
+// PHP 5.4 felett
+$tomb = [
+	"kulcs1" => "ertek1",
+	"kulcs2" => "ertek2",
+];
+\end{lstlisting}
+
+\Section{Layout tervezés}
+
+A weboldalt, webalkalmazást jó esetben nem magának készítteti a megrendelő, hanem a vásárlóinak, ügyfeleinek, ám a saját céljai elérése érdekében. Ezt a két érdekkört kellett a design megtervezése során figyelembe vennem, tehát olyan megjelenést kialakítani, ami mind a látogatóknak, mind az üzleti tevékenységnek megfelel.
+
+Mivel a weboldalak jelentős részén a menüpontok egy felső vízszintes sávban helyezkednek el, így azzal a feltételezéssel éltem, hogy a felhasználók többsége is - márcsak megszokásból is - itt fogja keresni, ennek megfelelően ott helyeztem el.
+
+\begin{figure}[H]
+	\includegraphics[width=1\textwidth]{katt-sport-hu-fooldal.jpg}
+	\caption{A katt.sport.hu tervezett főoldalának felső része}
+\end{figure}
+
+\newpage
+
+Egy honlapot véleményem szerint két fő okból keresnek fel: további információ szerzése az adott vállalkozásról, annak tevékenységéről, termékeiről (esetleg azok igénylése, megvásárlása), másrészt a kapcsolati adatok (telefonszám, e-mail cím, telephely) és nyitvatartási rend miatt. Tekintettel a mobiltelefonos böngészés terjedésére az elérhetőségek a lap legtetején kerültek megjelenítésre, így kisebb kijelzőn ezek az adatok jelennek meg azonnal a felhasználóknak.
